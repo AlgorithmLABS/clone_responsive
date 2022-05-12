@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout 3</title>
+    <style>
+      .wrap {
+        margin: 0 auto;
+        width: 1200px;
+      }
+      header {
+        width: 100%;
+        height: 150px;
+        background: #f3e5f5;
+      }
+      aside {
+        float: left;
+        width: 30%;
+        height: 700px;
+        background: #e1bee7;
+      }
+      section {
+        float: left;
+        width: 70%;
+        height: 700px;
+        background: #ce93d8;
+      }
+      footer {
+        clear: both;
+        width: 100%;
+        height: 150px;
+        background: #ba68c8;
+      }
+      /*화면 너비가 0px ~ 1200px 까지 (20px는 스크롤 안생기게 하려고) 일반적인 desktop*/
+      @media (max-width: 1220px) {
+        .wrap {
+          width: 95%;
+        }
+      }
+
+      /*화면너비 0~768일때 타블렛 버전*/
+      @media (max-width: 768px) {
+        .wrap {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .wrap {
+          width: 100%;
+        }
+        header {
+          height: 300px;
+        }
+        aside {
+          float: none;
+          width: 100%;
+          height: 300px;
+        }
+        section {
+          float: none;
+          width: 100%;
+          height: 300px;
+        }
+        footer {
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header></header>
+      <aside></aside>
+      <section></section>
+      <footer></footer>
+    </div>
+  </body>
+</html>
